@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./task1.js"></script>  
+    <script src="./task2.js"></script>
+    <script src="./task3.js"></script>
+    <script src="./task4.js"></script>
+    <script src="./task5.js"></script>
+    <script src="./task6.js"></script>
+    <script src="./task7.js"></script>
+    <script src="./task8.js"></script>
+    <script src="./task9.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+<script>
+  mocha.setup('bdd');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+
+<script>
+  var assert = chai.assert;
+</script>
+
+
+<div id="mocha"></div>
+<script>
+  
+  //Task 1. Minimal element
+    describe("f1", function (){
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f1([5, 3, 9, 7, 2, 4]), 2);
+    }); 
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f1([5, 3, 9, 7, 2, 4]), null);
+    });     
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f1([5, 3, 9, 7, 2, 4]), 15); 
+    });
+    });
+  
+  //Task 2. Maximal element
+    describe ("f2", function (){
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f2([5, 3, 9, 7, 2, 4]), undefined);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f2([5, 3, 9, 7, 2, 4]), 9);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f2([5, 3, 9, 7, 2, 4]), null);
+    });
+    });
+  
+  //Task 3. Minimal element index
+    describe ("f3", function (){
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f3([5, 3, 9, 7, 2, 4]), NaN);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f3([5, 3, 9, 7, 2, 4]), 4);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f3([5, 3, 9, 7, 2, 4]), null);
+    });
+    });
+
+  //Task 4. Maximal element index
+    describe ("f4", function (){
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f4([5, 3, 9, 7, 2, 4]), 1);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f4([5, 3, 9, 7, 2, 4]), 2);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f4([5, 3, 9, 7, 2, 4]), undefined);
+    });
+    });
+
+  //Task 5. Elements summ
+    describe ("f5", function (){
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f5([5, 3, 9, 7, 2, 4]), 76);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f5([5, 3, 9, 7, 2, 4]), 14);
+    });
+    it("передаем 5, 3, 9, 7, 2, 4", function() {
+        assert.equal(f5([5, 3, 9, 7, 2, 4]), NaN);
+    });
+    });
+    
+  //Task 6. Array reverse
+    describe ("f6", function(){
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal(f6([5,3,9,"ifs",2,4]), 567);
+    });
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal(console.log(f6([5,3,9,7,2,4]), 4, 2, 7, 9, 3, 5 ));
+    });
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal((f6([5,3,9,7,2,4]), undefined ));
+    });
+    });
+
+  //Task 7. Count elements
+    describe ("f7", function(){
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal(f7([5,3,9,7,2,4]), 5);
+    });
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal(f7([5,3,9,7,2,4]), 4);
+    });
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal((f7([5,3,9,7,2,4]), null ));
+    });
+    it("передаем 5,3,9,7,2,4", function(){
+      assert.equal((f7([5,3,9,7,2,4]), undefined ));
+    });
+    });
+
+  //Task 8. Half array reverse.
+    describe ("f8", function(){
+    it("передаем 3,1,4,2", function(){
+      assert.equal(f8([3,1,4,2]), 'some');
+    });
+    it("передаем 3,1,4,2", function(){
+      assert.equal(console.log(f8([3,1,4,2]), [ 1, 2, 3, 4 ]));
+    });
+    it("передаем 3,1,4,2", function(){
+      assert.equal((f8([3,1,4,2]), null ));
+    });
+    });
+
+//Task 9. Bubble array sorting
+describe ("fbubble", function(){
+    it("передаем 3,1,4,2", function(){
+      assert.equal(fbubble([3,1,4,2]), [4, 2, 1, 3]);
+    });
+    it("передаем 3,1,4,2", function(){
+      assert.equal(console.log(fbubble([3,1,4,2]), [ 1, 2, 3, 4 ]));
+    });
+    it("передаем 3,1,4,2", function(){
+      assert.equal((fbubble([3,1,4,2]), null ));
+    });
+    });
+
+    </script>   
+<script>
+  mocha.run();
+</script>
+</body>
+</html>

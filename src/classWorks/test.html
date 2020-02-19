@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./task1.js"></script>   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+<script>
+  mocha.setup('bdd');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+
+<script>
+  var assert = chai.assert;
+</script>
+
+
+<div id="mocha"></div>
+<script>
+describe ("f1", function (){
+    it("передаем 5, 3, 9, 7, 2", function() {
+        assert.equal(f1(5, 3, 9, 7, 2), 3);
+    });
+    });
+    </script>   
+<script>
+  mocha.run();
+</script>
+</body>
+</html>

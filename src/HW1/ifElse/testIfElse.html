@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+<script>
+  mocha.setup('bdd');
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+
+<script>
+  var assert = chai.assert;
+</script>
+    <script src="./task1.js"></script>  
+    <script src="./task2.js"></script>
+    <script src="./task3.js"></script>
+    <script src="./task4.js"></script>
+    <script src="./task5.js"></script>
+    <script>
+
+//Task 1
+    describe("chetnost", function (){
+        it("передаем 5, 2", function() {
+            assert.equal(chetnost(5, 2), null);
+        }); 
+        it("передаем 5, 2", function() {
+            assert.equal(chetnost(5, 2), 7);
+        });     
+        it("передаем 5, 2", function() {
+            assert.equal(chetnost(5, 2), NaN); 
+        });
+        });
+  
+//Task 2
+    describe("maximal", function () {
+        it("передаем 2, 4, 7", function () {
+            assert.equal(maximal(2, 4, 7), null);
+        });
+        it("передаем 2, 4, 7", function () {
+            assert.equal(maximal(2, 4, 7), 59);
+        });
+        it("передаем 2, 4, 7", function () {
+            assert.equal(maximal(2, 4, 7), NaN);
+         });
+        });
+//Task 3
+    describe("summ", function (){
+        it("передаем 5, 678, 0", function() {
+            assert.equal(summ(5, 678, 0), null);
+        }); 
+        it("передаем 5, 678, 0", function() {
+            assert.equal(summ(5, 678, 0), 683);
+        });     
+        it("передаем 5, 678, 0", function() {
+            assert.equal(summ(5, 678, 0), NaN); 
+        });
+        });
+//Task 4
+        describe("max", function(){
+            it("передаем 5, 23, 6", function(){
+                assert.equal(max(5, 23, 6), null);
+            });
+            it("передаем 5, 23, 6", function(){
+                assert.equal(max(5, 23, 6), 693);
+            });
+            it("передаем 5, 23, 6", function(){
+                assert.equal(max(5, 23, 6), undefined);
+            });
+        });
+//Task 5
+        describe("rating", function(){
+            it("передаем 85", function(){
+                assert.equal(rating(85), 789);
+            });
+            it("передаем 85", function(){
+                assert.equal(rating(85), 'B');
+            });
+            it("передаем 85", function(){
+                assert.equal(rating(85), NaN);
+            });
+        });
+    </script>
+
+<div id="mocha"></div>
+
+<script>
+  mocha.run();
+</script> 
+</body>
+</html>
