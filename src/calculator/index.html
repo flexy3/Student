@@ -1,80 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="main.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
-
-<script>
-  mocha.setup('bdd');
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
-
-<script>
-  var assert = chai.assert;
-</script>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-
-<div id="mocha"></div>
-
-<script>
-
-    describe ("sum", function(){
-        it("передаю 2, 3", function(){
-            assert.equal(sum(2, 3), 5)
-        });
-    });
-    describe ("substraction", function(){
-        it("передаю 3, 2", function(){
-            assert.equal(substraction(3, 2), 1)
-        });
-    });
-    describe ("mult", function(){
-        it("передаю 3, 2", function(){
-            assert.equal(mult(3, 2), 6)
-        });
-    });
-    describe ("divide", function(){
-        it("передаю 6, 2", function(){
-            assert.equal(divide(6, 2), 3)
-        });
-    });
-
-</script>
     <div class="calculator">
-<input type="text" class="display"id ="display" value = "+">
-    <div class="number">
-<input type="button" value = "1" class="numbers button">
-<input type="button" value = "2" class="numbers button">
-<input type="button" value = "3" class="numbers button">
-<input type="button" value = "4" class="numbers button">
-<input type="button" value = "5" class="numbers button">
-<input type="button" value = "6" class="numbers button">
-<input type="button" value = "7" class="numbers button">
-<input type="button" value = "8" class="numbers button">
-<input type="button" value = "9" class="numbers button">
-<input type="button" value = "0" class="numbers button"></div>
-    <div class="arithmeticad">
-<input type="button" value = "+" class="arithmetica button">
-<input type="button" value = "-" class="arithmetica button">
-<input type="button" value = "*" class="arithmetica button">
-<input type="button" value = "/" class="arithmetica button">
-<input type="button" value = "=" class="arithmetica button">
-<input type="button" value = "AC"class="arithmetica button"></div>
-
-</div>
-
-    <script src="calc.js"></script>
-<script>
-    mocha.run();
-</script>
-
+        <input type="text" class="display" id="display">
+        <div class="flex">
+            <input type="button" value="AC" class="button" id="clear">
+            <input type="button" value="&divide;" class="button operator">
+        </div>
+        <div class="flex">
+            <input type="button" value="7" class="button">
+            <input type="button" value="8" class="button">
+            <input type="button" value="9" class="button">
+            <input type="button" value="&times;" class="button operator">
+        </div>
+        <div class="flex">
+            <input type="button" value="4" class="button">
+            <input type="button" value="5" class="button ">
+            <input type="button" value="6" class="button">
+            <input type="button" value="-" class="button operator">
+        </div>
+        <div class="flex">
+            <input type="button" value="1" class="button">
+            <input type="button" value="2" class="button">
+            <input type="button" value="3" class="button">
+            <input type="button" value="+" class="button operator">
+        </div>
+        <div class="flex">
+            <input type="button" value="0" class="button zero">
+            <input type="button" value="." class="button" id="dot">
+            <input type="button" value="=" class="button" id="equal">
+        </div>
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
