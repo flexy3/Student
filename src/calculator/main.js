@@ -1,13 +1,12 @@
 "use strict"
 const equal = document.getElementById("equal");
-const dot = document.getElementById("dot");
 const display = document.getElementById("display");
 const button = document.querySelectorAll(".button");
 
 let number1;
 let number2;
 let operator;
-
+let dotClick = true;
 function sum(a, b) {
     return +a + +b;
 }
@@ -39,7 +38,6 @@ function arithmetic() {
     }
     number1 = undefined;
     number2 = undefined;
-    dot.addEventListener("click", () => { display.value += "." }, { once: true });
 }
 for (let i = 0; i < button.length - 1; i++) {
     button[i].addEventListener("click", clickButton)
@@ -51,25 +49,40 @@ function clickButton(event) {
             (number1 == undefined) ? number1 = display.value : arithmetic();
             operator = "+"
             display.value = "";
+  
+             dotClick = true;
+
             break;
         case "-":
             (number1 == undefined) ? number1 = display.value : arithmetic();
             display.value = "";
-            operator = "-"
+            operator = "-";
+
+            dotClick = true;
+
             break;
         case "×":
             (number1 == undefined) ? number1 = display.value : arithmetic();
             display.value = "";
-            operator = "*"
+            operator = "*";
+
+            dotClick = true;
+
             break;
         case "÷":
             (number1 == undefined) ? number1 = display.value : arithmetic();
             display.value = "";
-            operator = "/"
+            operator = "/";
+             dotClick = true;
+
             break;
         case "=":
             break;
         case ".":
+            if(dotClick){
+            if((display.value^0) == display.value){
+                display.value += "."
+        }}
             break;
         case "AC":
             number1 = undefined;
@@ -81,4 +94,3 @@ function clickButton(event) {
     }
 }
 equal.addEventListener("click", arithmetic);
-dot.addEventListener("click", () => { display.value += "." }, { once: true });
