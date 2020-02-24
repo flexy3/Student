@@ -1,8 +1,10 @@
-var a = prompt("Введите число");
-var b = 0;
-for(; a; a = Math.floor(a / 10))
-{
-    b *= 10;
-    b += a % 10;
+// let a = 123;
+function zerkal(a) { 
+    let strA = String(a);
+    let result = '';
+    for (let i = strA.length - 1; i >= 0; i--) {
+      result += strA[i]
+    } 
+    return result;
 }
-alert(b);
+console.log(zerkal(a));

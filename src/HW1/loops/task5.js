@@ -1,11 +1,9 @@
-var a = prompt("Введите число","");
-var b = 0;
-if(a == 0) 
-{
-    alert("Сумма чисел равна 0");
+// var a = 3;
+// var b = 2;
+function summa(a, b){
+    if (a > 0 && b > 0)
+        return a + b;
+            return "Сумма чисел равна 0";
 }
-for(var i = a; i > 0; i/10)
- {
-        b += a%b;
- }
-alert(b);
+
+console.log(summa(a, b))

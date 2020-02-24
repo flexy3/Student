@@ -7,7 +7,13 @@
 </head>
 <body>
 
-    
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <script src="task5.js"></script>
+    <script src="task6.js"></script>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
 
@@ -29,9 +35,59 @@
     <script>
 
 //Task 1
-
-
-
+describe("summ", function (){
+        it("Вызываем функцию", function() {
+            assert.equal(summ(),2450);
+        }); 
+        it("Вызываем функцию", function() {
+            assert.equal(summ(), 7);
+        }); 
+      }); 
+//Task 2 ?????
+describe("simple", function (){
+        it("передаем 0", function() {
+            assert.equal(simple(0), null);
+        }); 
+        it("передаем 7", function() {
+            assert.equal(simple(7), 'not simple');
+        }); 
+      }); 
+//Task 3
+describe("sqrt", function(){
+  it("передаем 4", function(){
+    assert.equal(sqrt(4), 2);
+  });
+  it("передаем 140", function(){
+    assert.equal(sqrt(140), 12);
+  });
+});
+//Task 4
+describe("factorial", function(){
+  it("передаем 3", function(){
+    assert.equal(factorial(3), 6)
+  });
+  it("передаем 5", function(){
+    assert.equal(factorial(5), 121)
+  });
+});
+//Task 5
+describe("summa", function(){
+  it("передаем 3 и 2", function(){
+    assert.equal(summa(3, 2), 5)
+  });
+  it("передаем 3 и 2", function(){
+    assert.equal(summa(3, 2), 1)
+  });
+});
+//Task 6
+describe("zerkal", function(){
+  it("передаем 123", function(){
+    assert.equal(zerkal(123), 321)
+  });
+  it("предаем 123", function(){
+    assert.equal(zerkal(123), 123)
+  });
+});
 
     </script>
 
