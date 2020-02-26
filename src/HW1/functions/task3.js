@@ -1,9 +1,10 @@
+var a = 'Сто Три';
 var ary = [];
 ary[0] = ["Ноль", "Один", "Два", "Три", "Четыре", "Пять", "Шесть", "Семь", "Восемь", "Девять", "Десять", "Одиннадцать", "Двенадцать", "Тринадцать", "Четырнадцать", "Пятнадцать", "Шестнадцать", "Семнадцать", "Восемнадцать", "Девятнадцать"];
 ary[1] = ["", "", "Двадцать", "Тридцать", "Сорок", "Пятьдесят", "Шестьдесят", "Семьдесят", "Восемьдесят", "Девяносто"];
 ary[2] = ["", "Сто", "Двести", "Триста", "Четыреста", "Пятьсот", "Шестьсот", "Семьсот", "Восемьсот", "Девятьсот"];
 
-function function_name(str) {
+function function_name(strAry) {
 	var res = 0;
 	var mul = 1;
 	var strAry = str.split(' ');
@@ -20,12 +21,9 @@ function function_name(str) {
 		}
 		res = res * 10 + n;
 	}
-	console.log(str, res);
 	return res;
 }
-
-
-for (var str; str = prompt('Введите число прописью:');) {
-	var res = function_name(str);
-	alert(res);
-}
+console.log(function_name(strAry))
+// for (var str; str = prompt('Введите число прописью:');) {
+// 	var res = function_name(str);
+// 	alert(res);

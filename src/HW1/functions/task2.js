@@ -1,4 +1,4 @@
-// let num = 430;
+let num = 430;
 function convertor(n, a, b) {
     n = parseInt(n);
     if (n < 20) {
