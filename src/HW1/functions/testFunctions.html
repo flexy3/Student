@@ -36,18 +36,22 @@
     });
   });
 
-  // //Task 2
-  //   describe("convertor", function(){
-  //     it("передаем 430", function(){
-  //       assert.equal(convertor(430), 430);
-  //     });
-  //     it("передаем 430", function(){
-  //       assert.equal(convertor(430), 'четыреста тридцать');
-  //     });
-  //   });
+  //Task 2
+    describe("convertor", function(){
+      it("передаем 430", function(){
+        assert.equal(convertor(430), 'четыреста тридцать');
+      });
+      it("передаем 430", function(){
+        assert.equal(convertor(30), 'двадцать');
+      });
+    });
 
 //Task 3
-    // describe("")
+    describe("strnum", function(){
+      it("передаем строку числа", function(){
+        assert.equal(strnum('two hundred fifty three'), 253)
+      });
+    });
 
 
   </script>

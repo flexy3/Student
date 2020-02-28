@@ -1,18 +1,5 @@
-let num = 430;
-function convertor(n, a, b) {
-    n = parseInt(n);
-    if (n < 20) {
-        return ((b && !n) ? '' : a[0][n]);
-    }
-    if (n >= 100) {
-        return (a[2][('' + n).substr(0, 1)] + ' '
-            + arguments.callee(('' + n).substr(1), a, true));
-    }
-    return (a[1][parseInt(n / 10)] + ' ' + ((n % 10)
-                                           ? a[0][n % 10]
-                                           : ''));
-}
-let arr = [
+// let n = 430;
+let a = [
     ["ноль", "один", "два", "три", "четыре", "пять", "шесть",
         "семь", "восемь", "девять", "десять", "одиннадцать",
         "двенадцать", "тринадцать", "четырнадцать", "пятнадцать",
@@ -24,4 +11,17 @@ let arr = [
     [,"сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот",
         "семьсот", "восемьсот", "девятьсот"]
 ];
-console.log(convertor(num, arr));
+function convertor(n) {
+    n = parseInt(n);
+    if (n < 20) {
+        return ((b && !n) ? '' : a[0][n]);
+    }
+    if (n >= 100) {
+        return (a[2][('' + n).substr(0, 1)] + ' '
+            + arguments.callee(('' + n).substr(1), a, true));
+    }
+    return (a[1][parseInt(n / 10)] + '' + ((n % 10)
+                                           ? a[0][n % 10]
+                                           : ''));
+}
+//console.log(convertor(n, a));
